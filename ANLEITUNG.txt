@@ -1,0 +1,23 @@
+== Browser Prep ==
+https://github.com/cpnatwork/DockerDemo
+https://labs.play-with-docker.com/
+https://hub.docker.com/r/cpnatwork/demo
+https://console.aws.amazon.com/ecs/
+https://console.aws.amazon.com/ecs/home#/firstRun
+
+== Clean-Up ==
+cd && rm -rf DockerDemo && clear
+
+== PWD Prep ==
+docker login --username=cpnatwork
+«password»
+
+== PWD Main ==
+git clone https://github.com/cpnatwork/DockerDemo.git && cd DockerDemo
+docker build .
+docker run -p 80:80 <lokale-ImageID>
+docker tag _ cpnatwork/demo:iris
+docker push cpnatwork/demo
+
+== ECS Main ==
+cpnatwork/demo:iris
